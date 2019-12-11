@@ -37,7 +37,7 @@ export default new Vuex.Store({
           });
           router.push('/campgrounds');
         })
-        .catch(error => console.log(error));
+        .catch(Error);
     },
     tryAutoLogin({ commit }) {
       const token = cookie.get('token');

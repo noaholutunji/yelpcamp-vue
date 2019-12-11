@@ -51,7 +51,6 @@ export default {
   },
   mounted: function() {
     axios.get('/campgrounds').then(result => {
-      console.log(result);
       this.campgrounds = result.data.campgrounds;
     });
   },
