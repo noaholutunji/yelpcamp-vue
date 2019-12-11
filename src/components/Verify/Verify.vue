@@ -53,7 +53,7 @@ export default {
         .then(res => {
           this.$router.push('/login');
         })
-        .catch(error);
+        .catch(error => console.log(error));
     },
   },
 };

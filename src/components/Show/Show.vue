@@ -50,7 +50,7 @@ export default {
         .then(res => {
           this.$router.push('/campgrounds');
         })
-        .catch(err);
+        .catch(err => console.log(err));
     },
   },
   mounted: function() {

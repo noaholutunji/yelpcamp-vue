@@ -83,13 +83,13 @@ export default {
         email: this.email,
         password: this.password,
       };
-
+      console.log(formData);
       axios
         .post('/register', formData)
         .then(res => {
           this.$router.push('/verify');
         })
-        .catch(error);
+        .catch(error => console.log(error));
     },
   },
 };
