@@ -21,11 +21,11 @@
 
     <template>
       <div class="row text-center">
-        <div class="format">
+        <div class="campground-wrapper">
           <div v-for="campground in campgrounds" :key="campground.id">
             <div class="col-md-3 col-sm-6">
               <div>
-                <img class="card" alt="" :src="campground.image" />
+                <img class="campground-img" alt="" :src="campground.image" />
 
                 <h4>{{ campground.name }}</h4>
 
@@ -64,11 +64,11 @@ export default {
 </script>
 
 <style scoped>
-.format {
+.campground-wrapper {
   display: flex;
   flex-wrap: wrap;
 }
-.card {
+.campground-img {
   width: 18em;
   padding-top: 10px;
 }

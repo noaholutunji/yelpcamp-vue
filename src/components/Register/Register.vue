@@ -60,6 +60,7 @@
 <script>
 import axios from 'axios';
 import { required, email, minLength } from 'vuelidate/lib/validators';
+
 export default {
   data() {
     return {
@@ -77,6 +78,7 @@ export default {
       minLength: minLength(6),
     },
   },
+
   methods: {
     onSubmit() {
       const formData = {

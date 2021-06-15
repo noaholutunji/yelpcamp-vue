@@ -43,7 +43,7 @@
           </router-link>
           <!-- </li> -->
 
-          <li class="log" v-if="auth" @click="onLogout">Logout</li>
+          <li class="logout" v-if="auth" @click="onLogout">Logout</li>
         </ul>
       </div>
     </div>
@@ -66,7 +66,7 @@ export default {
 </script>
 
 <style scoped>
-.log {
+.logout {
   padding-top: 15px;
   padding-right: 15px;
   padding-left: 15px;
