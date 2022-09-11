@@ -68,7 +68,7 @@ export default {
         image: this.image,
         description: this.description,
       };
-
+      console.log(formData);
       axios
         .patch(`/campground/${this.$route.params.id}`, formData, {
           headers: {
@@ -78,7 +78,7 @@ export default {
         .then(res => {
           this.$router.push(`/campground/${this.$route.params.id}`);
         })
-        .catch(error);
+        .catch(error => console.log(error));
     },
   },
   mounted: function() {
