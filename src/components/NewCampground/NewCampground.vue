@@ -73,7 +73,6 @@ export default {
         image: this.image,
         description: this.description,
       };
-      console.log(formData);
 
       axios
         .post('/campgrounds', formData, {
@@ -84,7 +83,7 @@ export default {
         .then(res => {
           this.$router.push('/campgrounds');
         })
-        .catch(error => console.log(error));
+        .catch(error);
     },
   },
 };
