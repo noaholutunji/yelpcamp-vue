@@ -1,10 +1,10 @@
 <template>
   <div class="container">
-    <h1 class="heading">Account Verification</h1>
+    <h1 class="verify-header">Account Verification</h1>
     <p class="heading">
       <strong>Check your email to get the verification code</strong>
     </p>
-    <div class="log">
+    <div class="verify-form">
       <form @submit.prevent="onSubmit">
         <div class="form-group">
           <input
@@ -34,6 +34,7 @@
 
 <script>
 import axios from 'axios';
+
 export default {
   data() {
     return {
@@ -41,6 +42,7 @@ export default {
       code: '',
     };
   },
+
   methods: {
     onSubmit() {
       const formData = {
@@ -60,10 +62,10 @@ export default {
 </script>
 
 <style scoped>
-.heading {
+.verify-header {
   text-align: center;
 }
-.log {
+.verify-form {
   width: 30%;
   margin: 25px auto;
 }

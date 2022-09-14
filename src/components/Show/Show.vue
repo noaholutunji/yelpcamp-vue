@@ -29,6 +29,7 @@
 <script>
 import axios from 'axios';
 import cookie from 'js-cookie';
+
 export default {
   data() {
     return {
@@ -39,6 +40,7 @@ export default {
       description: '',
     };
   },
+
   methods: {
     deleted() {
       axios
@@ -53,6 +55,7 @@ export default {
         .catch(err => console.log(err));
     },
   },
+
   mounted: function() {
     axios.get(`/campground/${this.$route.params.id}`).then(res => {
       this.id = res.data.campground.id;
@@ -62,6 +65,7 @@ export default {
       this.description = res.data.campground.description;
     });
   },
+
   computed: {
     auth() {
       return this.$store.getters.isAuthenticated;

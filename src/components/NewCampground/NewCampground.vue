@@ -56,6 +56,7 @@
 <script>
 import axios from 'axios';
 import cookie from 'js-cookie';
+
 export default {
   data() {
     return {
@@ -65,6 +66,7 @@ export default {
       description: '',
     };
   },
+
   methods: {
     onSubmit() {
       const formData = {
@@ -73,7 +75,6 @@ export default {
         image: this.image,
         description: this.description,
       };
-      console.log(formData);
 
       axios
         .post('/campgrounds', formData, {
@@ -89,10 +90,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.newForm {
-  width: 40%;
-  margin: 25px auto;
-}
-</style>
